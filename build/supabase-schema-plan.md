@@ -1,0 +1,1 @@
+Create Supabase schema plan clean
