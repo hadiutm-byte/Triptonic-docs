@@ -1,131 +1,143 @@
-# Triptonic — Booking Module
+# Triptonic — Booking Module (Product Flow)
 
 ## 1. Purpose
 
-The Booking module controls the conversion of a confirmed deal into a structured and executable transaction.
+The Booking Module is the user-facing system.
 
-It ensures that once a deal is approved, it becomes a controlled booking with clear parameters and traceability.
-
----
-
-## 2. Core Objectives
-
-The Booking module must:
-
-- convert deals into bookings
-- lock key transaction parameters
-- manage booking lifecycle
-- ensure consistency between pricing, operations, and finance
-- provide full visibility of active and completed bookings
+It allows clients or sales to:
+- create requests  
+- search inventory  
+- generate quotes  
+- confirm bookings  
 
 ---
 
-## 3. Booking Lifecycle
+## 2. Entry Points
 
-Each booking follows:
+A booking can start from:
 
-1. Deal Confirmed
-2. Booking Created
-3. Parameters Locked
-4. Execution Linked
-5. Completion
-6. Financial Closure
+- client request (website / WhatsApp / call)  
+- sales agent input  
+- repeat client request  
 
 ---
 
-## 4. Functional Capabilities
+## 3. Request Creation
 
-### 4.1 Booking Creation
-System should:
-- create booking from confirmed deal
-- link booking to client and deal
-- assign booking owner
+User must input:
 
-### 4.2 Parameter Control
-System should:
-- lock pricing after confirmation
-- lock key execution parameters
-- prevent unauthorized changes
+- pickup location  
+- drop-off location  
+- date & time  
+- vehicle type (optional)  
+- special requirements  
 
-### 4.3 Status Tracking
-System should:
-- track booking status
-- update lifecycle stage
-- provide real-time visibility
-
-### 4.4 Integration
-Booking must link to:
-- CRM (client)
-- Pricing Engine
-- Deal Engine
-- Operations
-- Finance
-
-### 4.5 Change Management
-System should:
-- allow controlled changes
-- track all modifications
-- log approvals for changes
+System creates:
+→ request ID  
+→ sends to Deal Engine  
 
 ---
 
-## 5. Permissions
+## 4. Inventory Search
 
-### Admin
-- full access
+System retrieves:
 
-### Sales
-- create booking from deals
-- view and manage booking status
+- available vehicles  
+- pricing range  
+- estimated arrival  
 
-### Operations
-- manage execution phase
-
-### Finance
-- manage financial closure
-
-### Management
-- full visibility
+User sees:
+→ list of vehicle options  
 
 ---
 
-## 6. Audit Requirements
+## 5. Pricing Generation
 
-System must log:
+System:
 
-- booking created
-- parameters locked
-- status changed
-- modification requested
-- modification approved
-- booking completed
-
-Each event includes:
-- user
-- timestamp
-- action
-- previous value
-- new value
+- calculates price via Pricing Engine  
+- applies margin  
+- generates structured quote  
 
 ---
 
-## 7. Reporting Requirements
+## 6. Quote Interaction
 
-System should support:
+User can:
 
-- booking volume
-- booking status distribution
-- completion rate
-- revenue per booking
-- operational performance
+- view quote  
+- request changes  
+- select vehicle  
+- approve  
 
 ---
 
-## 8. Future Expansion
+## 7. Booking Confirmation
 
-Future capabilities may include:
+Once approved:
 
-- automated booking workflows
-- AI booking optimization
-- dynamic booking adjustments
-- smart contract integration
+- deal status updated  
+- booking created  
+- parameters locked  
+
+---
+
+## 8. Payment Step
+
+System:
+
+- generates invoice  
+- waits for payment  
+- confirms payment  
+
+⚠️ No execution before payment
+
+---
+
+## 9. Execution Trigger
+
+After payment:
+
+- Operations is notified  
+- vehicle assigned  
+- booking executed  
+
+---
+
+## 10. Tracking
+
+User / sales can see:
+
+- booking status  
+- vehicle details  
+- timeline  
+
+---
+
+## 11. Completion
+
+After execution:
+
+- booking marked completed  
+- deal moves to finance settlement  
+
+---
+
+## 12. System Rules
+
+- every booking must link to a deal  
+- no booking without pricing  
+- no execution without payment  
+- all steps logged  
+
+---
+
+## 13. Goal
+
+Provide:
+
+- fast booking experience  
+- full control  
+- high conversion  
+
+This is the product layer of Triptonic
