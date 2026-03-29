@@ -1,88 +1,139 @@
-# Universal Jets — Sales Dashboard
+"}
+# Triptonic — Sales Dashboard (Internal CRM UI)
 
 ## 1. Purpose
 
-This dashboard is the main working interface for sales agents.
+This is the internal system used by sales teams.
 
-It allows them to manage clients, create quotes, and track deals.
-
----
-
-## 2. Main Sections
-
-### 2.1 Client Search
-- search by name / phone / email
-- quick access to client profile
-- show previous trips and preferences
+It allows agents to manage clients, deals, and bookings efficiently.
 
 ---
 
-### 2.2 New Request (Quick Form)
-Fields:
-- From / To
-- Date / Time
-- Passengers
-- Preferences (smoking, pets, catering)
+## 2. Dashboard Overview
 
-CTA:
-→ “Search Aircraft”
+Main sections:
 
----
-
-### 2.3 Live Results (Inventory + Pricing)
-Display:
-- aircraft options
-- photos
-- category (light / midsize / heavy)
-- total price
-- availability status
-
-Actions:
-- select aircraft
-- adjust margin
-- request operator confirmation
+- Leads  
+- Active Deals  
+- Bookings  
+- Clients  
+- Revenue  
 
 ---
 
-### 2.4 Quote Builder
-Display:
-- selected aircraft
-- pricing breakdown
-- margin
-- total price
+## 3. Lead Management
 
-CTA:
-→ “Generate Quote”
-→ “Send to Client”
+Sales can:
 
----
+- view incoming leads  
+- assign leads  
+- convert leads into deals  
 
-### 2.5 Deal Tracker
-Pipeline view:
-- New
-- Quote Sent
-- Pending
-- Confirmed
-- Lost
+Each lead shows:
+- client info  
+- request details  
+- status  
 
 ---
 
-### 2.6 Notifications
-- operator confirmations
-- client replies
-- payment updates
+## 4. Deal Management
+
+Sales can:
+
+- create deal  
+- update deal status  
+- generate quote  
+- send to client  
+
+Each deal shows:
+- client  
+- pricing  
+- status  
+- timeline  
 
 ---
 
-## 3. Key Features
+## 5. Quote Management
 
-- real-time search
-- instant pricing
-- one-click quote generation
-- WhatsApp / Email integration
+Sales can:
+
+- generate quotes  
+- edit pricing (with rules)  
+- send to client  
+- track approval  
 
 ---
 
-## 4. Goal
+## 6. Booking Management
 
-Reduce time to send a quote to under 5 minutes.
+Sales can:
+
+- view confirmed bookings  
+- track execution  
+- assist operations  
+
+---
+
+## 7. Client Management
+
+Sales can:
+
+- view client history  
+- see preferences  
+- manage relationships  
+
+---
+
+## 8. Revenue Tracking
+
+Dashboard shows:
+
+- revenue per deal  
+- total revenue  
+- profit margins  
+- performance  
+
+---
+
+## 9. Alerts & Actions
+
+System must notify:
+
+- new lead  
+- deal approved  
+- payment received  
+- issues in execution  
+
+---
+
+## 10. Integration
+
+Dashboard connects to:
+
+- CRM  
+- Deal Engine  
+- Pricing  
+- Inventory  
+- Operations  
+- Finance  
+
+---
+
+## 11. UX Principles
+
+- fast  
+- clear  
+- actionable  
+- real-time  
+
+---
+
+## 12. Goal
+
+Enable:
+
+- fast deal conversion  
+- full control  
+- high efficiency  
+
+This is your internal command cente
