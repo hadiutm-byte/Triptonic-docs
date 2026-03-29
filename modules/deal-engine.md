@@ -2,145 +2,108 @@
 
 ## 1. Purpose
 
-The Deal Engine manages the full lifecycle of a commercial transaction inside Triptonic.
+The Deal Engine is the core brain of Triptonic.
 
-It connects CRM, Pricing, Operations, and Finance into a single controlled workflow.
+It controls, tracks, and enforces every commercial transaction from start to finish.
 
----
-
-## 2. Core Objectives
-
-The Deal Engine must:
-
-- manage deal lifecycle from request to completion
-- link client, pricing, and execution
-- ensure structured deal progression
-- provide full visibility and control
-- support approvals and validations
+Nothing generates revenue outside the Deal Engine.
 
 ---
 
-## 3. Deal Lifecycle
+## 2. Core Principle
 
-Each deal must follow a clear lifecycle:
+No deal = no transaction.
 
-1. Request Created
-2. Pricing Generated
-3. Quote Sent
-4. Client Confirmation
-5. Contract Generated
-6. Payment Initiated
-7. Execution Started
-8. Deal Completed
+Every action must:
+- start with a deal
+- be linked to a deal
+- end with a deal
 
 ---
 
-## 4. Functional Capabilities
+## 3. Deal Lifecycle (Strict Flow)
 
-### 4.1 Deal Creation
-System should:
-- create deal from CRM request
-- link to client account
-- assign deal owner
-- store deal context
+Every deal MUST follow this exact sequence:
 
-### 4.2 Pricing Integration
-System should:
-- pull pricing from Pricing Engine
-- attach pricing versions
-- allow pricing updates
+1. Lead Captured  
+2. Deal Created  
+3. Pricing Generated  
+4. Quote Sent  
+5. Client Approved  
+6. Contract Issued  
+7. Payment Confirmed  
+8. Execution Started  
+9. Execution Completed  
+10. Deal Closed  
 
-### 4.3 Quote Management
-System should:
-- generate structured quotes
-- send to client
-- track status (sent / viewed / accepted)
-
-### 4.4 Confirmation
-System should:
-- record client confirmation
-- lock deal parameters after approval
-
-### 4.5 Contract Generation
-System should:
-- generate contract document
-- link to deal
-- track signature status
-
-### 4.6 Payment Trigger
-System should:
-- trigger finance workflow
-- link invoice to deal
-- track payment status
-
-### 4.7 Execution Link
-System should:
-- send deal to operations
-- track execution progress
+⚠️ No step can be skipped.
 
 ---
 
-## 5. Permissions
+## 4. Deal Object Structure
 
-### Admin
-- full control
+Each deal contains:
 
-### Sales
-- create and manage deals
-- send quotes
-- update deal status
-
-### Operations
-- view confirmed deals
-- manage execution phase
-
-### Finance
-- manage invoicing and payment tracking
-
-### Management
-- full visibility across pipeline
+- Deal ID  
+- Client ID  
+- Asset (vehicle)  
+- Pricing details  
+- Revenue breakdown  
+- Cost breakdown  
+- Margin calculation  
+- Status (lifecycle stage)  
+- Assigned owner  
+- Timestamps (each stage)  
+- Documents (quote, contract, invoice)
 
 ---
 
-## 6. Audit Requirements
+## 5. System Connections
 
-The Deal Engine must log:
+The Deal Engine connects:
 
-- deal created
-- status changed
-- pricing attached
-- quote sent
-- confirmation received
-- contract generated
-- payment initiated
-- deal completed
+- CRM → client + lead source  
+- Inventory → vehicle availability  
+- Pricing Engine → price calculation  
+- Operations → execution tracking  
+- Finance → payment + settlement  
 
-Each event must include:
-- user
-- timestamp
-- action
-- previous state
-- new state
+All modules depend on the Deal Engine.
 
 ---
 
-## 7. Reporting Requirements
+## 6. Rules & Enforcement
 
-System should support:
+- No pricing without a deal  
+- No booking without a deal  
+- No payment without a deal  
+- No execution without a deal  
 
-- pipeline visibility
-- conversion rates
-- deal cycle time
-- revenue tracking
-- stage performance
+System must block any action outside this flow.
 
 ---
 
-## 8. Future Expansion
+## 7. Visibility & Control
 
-Future capabilities may include:
+The Deal Engine provides:
 
-- automated deal scoring
-- AI deal optimization
-- predictive conversion tracking
-- automated follow-ups
+- full deal tracking  
+- real-time status  
+- revenue visibility  
+- margin control  
+- audit history  
+
+Every action must be traceable.
+
+---
+
+## 8. Outcome
+
+The Deal Engine ensures:
+
+- structured revenue generation  
+- operational control  
+- financial transparency  
+- scalability  
+
+This is the core of Triptonic.
