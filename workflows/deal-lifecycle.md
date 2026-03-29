@@ -1,0 +1,1 @@
+Create clean deal lifecycle file
