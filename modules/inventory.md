@@ -1,122 +1,98 @@
-# Triptonic — Inventory Module
+# Triptonic — Pricing Engine Module
 
 ## 1. Purpose
 
-The Inventory module manages all available supply within Triptonic.
+The Pricing Engine calculates, controls, and optimizes all deal pricing.
 
-It represents the assets, services, or resources that can be offered to clients, either directly owned or sourced from external providers.
-
----
-
-## 2. Core Objectives
-
-The Inventory module must:
-
-- store and manage available assets/services
-- connect to external providers or APIs
-- track availability
-- allow search and filtering
-- provide data to Pricing and Deal Engine
+It ensures profitability, competitiveness, and consistency.
 
 ---
 
-## 3. Inventory Types
+## 2. Core Principle
 
-Inventory can include:
+Revenue is not random. Pricing is controlled.
 
-- physical assets (jets, cars, properties)
-- services (concierge, experiences)
-- third-party provider offerings
-- API-based dynamic inventory
-
----
-
-## 4. Functional Capabilities
-
-### 4.1 Inventory Management
-System should:
-- create and manage inventory items
-- categorize inventory
-- define attributes (capacity, location, specs, etc.)
-- activate/deactivate items
-
-### 4.2 Availability Management
-System should:
-- track availability
-- support real-time updates
-- handle dynamic inventory (API-driven)
-
-### 4.3 Provider Management
-System should:
-- store providers/suppliers
-- link inventory to providers
-- manage provider relationships
-
-### 4.4 Search & Filtering
-System should:
-- allow search by criteria
-- filter based on attributes
-- return relevant options for deals
-
-### 4.5 Integration
-Inventory must connect to:
-- Pricing Engine (cost input)
-- Deal Engine (selection)
-- Operations (execution)
-- CRM (client preference matching)
+Every price must:
+- be calculated
+- be justified
+- protect margin
 
 ---
 
-## 5. Permissions
+## 3. Pricing Structure
 
-### Admin
-- full access
+Each deal price is built from:
 
-### Sales
-- search and view inventory
+- Base Cost (supplier / vehicle cost)
+- Operational Costs
+- Platform Fee (Triptonic margin)
+- Optional Services (add-ons)
+- Discounts (if applied)
 
-### Operations
-- manage availability and assignments
-
-### Management
-- full visibility
+Final Price = Total Revenue
 
 ---
 
-## 6. Audit Requirements
+## 4. Margin Logic
 
-System must log:
+System must calculate:
 
-- inventory created
-- inventory updated
-- availability changed
-- provider linked
-- inventory deactivated
+- Gross Revenue  
+- Total Cost  
+- Net Margin  
+- Margin %  
 
-Each event includes:
-- user
-- timestamp
-- action
-- changes
+⚠️ If margin is below threshold → alert or block
 
 ---
 
-## 7. Reporting Requirements
+## 5. Dynamic Pricing Factors
 
-System should support:
+Pricing adjusts based on:
 
-- inventory utilization
-- availability tracking
-- supplier performance
-- demand patterns
+- demand level  
+- location  
+- vehicle availability  
+- timing (peak vs off-peak)  
+- client type (VIP / repeat / new)  
 
 ---
 
-## 8. Future Expansion
+## 6. Pricing Rules
 
-Future capabilities may include:
+- No manual pricing without validation  
+- Discounts must be approved  
+- Minimum margin must be enforced  
+- Pricing must be logged  
 
-- live API integrations
-- automated availability sync
-- AI inventory recommendations
-- dynamic supply optimization
+---
+
+## 7. Integration
+
+Pricing Engine connects to:
+
+- Deal Engine → receives deal request  
+- Inventory → gets vehicle cost  
+- CRM → client profile  
+- Finance → revenue tracking  
+
+---
+
+## 8. Output
+
+The Pricing Engine produces:
+
+- final price  
+- detailed breakdown  
+- margin analysis  
+
+---
+
+## 9. Goal
+
+Maximize revenue while maintaining:
+- competitiveness  
+- profitability  
+- control  
+
+This is where profit is made or lost
