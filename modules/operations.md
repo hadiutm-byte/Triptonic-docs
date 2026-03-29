@@ -1,129 +1,111 @@
+}
 # Triptonic — Operations Module
 
 ## 1. Purpose
 
-The Operations module manages the execution phase of a confirmed deal.
+The Operations Module manages execution of every confirmed deal.
 
-It ensures that once a deal is approved and paid, it is properly delivered, coordinated, and completed.
-
----
-
-## 2. Core Objectives
-
-The Operations module must:
-
-- receive confirmed deals from Deal Engine
-- manage execution workflow
-- coordinate all involved parties
-- track delivery progress
-- ensure service completion
-- provide operational visibility
+It ensures service delivery from start to completion.
 
 ---
 
-## 3. Execution Workflow
+## 2. Core Principle
 
-Each operation follows:
+No execution without payment.
 
-1. Deal Received from Deal Engine
-2. Operation Created
-3. Resources Assigned
-4. Execution Started
-5. Monitoring & Updates
-6. Completion Confirmed
+No execution without a confirmed deal.
 
 ---
 
-## 4. Functional Capabilities
+## 3. Execution Flow
 
-### 4.1 Operation Creation
-System should:
-- create operation from confirmed deal
-- link to client and deal
-- assign operation owner
+Operations begin ONLY after:
 
-### 4.2 Resource Management
-System should:
-- assign resources (people, assets, vendors)
-- manage availability
-- track assignments
+1. Deal Approved  
+2. Payment Confirmed  
 
-### 4.3 Execution Tracking
-System should:
-- track status in real time
-- update progress
-- log key events
+Then:
 
-### 4.4 Communication
-System should:
-- allow internal coordination
-- track updates
-- notify relevant teams
-
-### 4.5 Completion
-System should:
-- confirm service delivery
-- close operation
-- trigger post-operation actions
+3. Vehicle Assigned  
+4. Booking Confirmed  
+5. Execution Started  
+6. Execution Completed  
 
 ---
 
-## 5. Permissions
+## 4. Responsibilities
 
-### Admin
-- full access
+Operations must handle:
 
-### Operations Team
-- manage execution
-- update status
-- assign resources
-
-### Sales
-- view execution status
-
-### Finance
-- view completion for financial closure
-
-### Management
-- full visibility
+- vehicle coordination  
+- supplier communication  
+- scheduling  
+- client coordination  
+- issue management  
 
 ---
 
-## 6. Audit Requirements
+## 5. Control Rules
 
-System must log:
-
-- operation created
-- resource assigned
-- status updated
-- issue reported
-- operation completed
-
-Each event includes:
-- user
-- timestamp
-- action
-- details
+- no execution without deal ID  
+- no execution without payment confirmation  
+- every step must be logged  
+- all stakeholders must be informed  
 
 ---
 
-## 7. Reporting Requirements
+## 6. Real-Time Tracking
 
-System should support:
+System must track:
 
-- operations status overview
-- execution performance
-- delay tracking
-- completion rates
-- resource utilization
+- live execution status  
+- delays or issues  
+- vehicle status  
+- completion confirmation  
 
 ---
 
-## 8. Future Expansion
+## 7. Exception Handling
 
-Future capabilities may include:
+Operations must manage:
 
-- real-time dashboards
-- automation triggers
-- AI operational optimization
-- predictive delay alerts
+- cancellations  
+- delays  
+- vehicle changes  
+- client requests  
+
+All changes must:
+- be logged  
+- update the deal  
+- notify all parties  
+
+---
+
+## 8. Integration
+
+Operations connects to:
+
+- Deal Engine → deal status  
+- Inventory → assigned vehicle  
+- CRM → client communication  
+- Finance → payment confirmation  
+
+---
+
+## 9. Output
+
+- execution status  
+- completion confirmation  
+- service reports  
+
+---
+
+## 10. Goal
+
+Ensure:
+
+- smooth execution  
+- high service quality  
+- client satisfaction  
+
+This is your delivery engine
