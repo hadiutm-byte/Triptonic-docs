@@ -2,125 +2,97 @@
 
 ## 1. Purpose
 
-The Pricing Engine defines how deals, services, or products are priced inside Triptonic.
+The Pricing Engine calculates, controls, and optimizes all deal pricing.
 
-It is responsible for transforming a request into a structured, explainable, and controllable price.
-
----
-
-## 2. Core Objectives
-
-The Pricing Engine must:
-
-- generate pricing dynamically
-- support manual overrides
-- apply pricing rules and logic
-- handle margins and commissions
-- remain auditable and transparent
-- support multiple pricing strategies
+It ensures profitability, competitiveness, and consistency.
 
 ---
 
-## 3. Pricing Components
+## 2. Core Principle
 
-Pricing should be composed of:
+Revenue is not random. Pricing is controlled.
 
-- base cost
-- markup / margin
-- commissions
-- additional fees
-- discounts (if applicable)
-- taxes (if applicable)
-
-Final price must always be explainable.
+Every price must:
+- be calculated
+- be justified
+- protect margin
 
 ---
 
-## 4. Functional Capabilities
+## 3. Pricing Structure
 
-### 4.1 Dynamic Pricing
-System should:
-- calculate price based on input parameters
-- adjust based on predefined rules
-- support real-time recalculation
+Each deal price is built from:
 
-### 4.2 Manual Override
-Authorized users should:
-- adjust final price
-- override margins
-- apply custom deals
+- Base Cost (supplier / vehicle cost)
+- Operational Costs
+- Platform Fee (Triptonic margin)
+- Optional Services (add-ons)
+- Discounts (if applied)
 
-All overrides must be logged.
-
-### 4.3 Rule Engine
-System should allow:
-- rule-based pricing logic
-- conditional pricing adjustments
-- client-specific pricing rules
-
-### 4.4 Version Control
-Each pricing output should:
-- store version history
-- allow comparison between versions
-- track changes over time
+Final Price = Total Revenue
 
 ---
 
-## 5. Permissions
+## 4. Margin Logic
 
-### Admin
-- full control over pricing rules and overrides
+System must calculate:
 
-### Sales
-- generate pricing
-- request or apply overrides (depending on permission level)
+- Gross Revenue  
+- Total Cost  
+- Net Margin  
+- Margin %  
 
-### Finance
-- validate margins
-- ensure pricing compliance
-
-### Management
-- visibility on pricing performance and margins
+⚠️ If margin is below threshold → alert or block
 
 ---
 
-## 6. Audit Requirements
+## 5. Dynamic Pricing Factors
 
-The Pricing Engine must log:
+Pricing adjusts based on:
 
-- price generated
-- price modified
-- override applied
-- rule triggered
-- discount applied
-
-Each event must include:
-- user
-- timestamp
-- action
-- previous value
-- new value
-- reason (if applicable)
+- demand level  
+- location  
+- vehicle availability  
+- timing (peak vs off-peak)  
+- client type (VIP / repeat / new)  
 
 ---
 
-## 7. Reporting Requirements
+## 6. Pricing Rules
 
-System should provide:
-
-- margin analysis
-- pricing performance
-- discount tracking
-- override frequency
-- revenue vs cost visibility
+- No manual pricing without validation  
+- Discounts must be approved  
+- Minimum margin must be enforced  
+- Pricing must be logged  
 
 ---
 
-## 8. Future Expansion
+## 7. Integration
 
-Future capabilities may include:
+Pricing Engine connects to:
 
-- AI-based pricing suggestions
-- demand-based pricing
-- predictive margin optimization
-- client-specific dynamic pricing
+- Deal Engine → receives deal request  
+- Inventory → gets vehicle cost  
+- CRM → client profile  
+- Finance → revenue tracking  
+
+---
+
+## 8. Output
+
+The Pricing Engine produces:
+
+- final price  
+- detailed breakdown  
+- margin analysis  
+
+---
+
+## 9. Goal
+
+Maximize revenue while maintaining:
+- competitiveness  
+- profitability  
+- control  
+
+This is where profit is made or lost
